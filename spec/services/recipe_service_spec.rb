@@ -11,6 +11,7 @@ RSpec.describe RecipeService do
    
     expect(response_body[:count]).to eq(191)
     expect(response_body[:hits][0][:recipe][:label]).to eq("Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)")
+    # expect(response_body[:hits][0][:recipe][:label]).to be_a(String)
     expect(response_body[:hits][0][:recipe]).to have_key(:label)
     expect(response_body[:hits][0][:recipe][:url]).to eq("https://www.seriouseats.com/recipes/2013/11/andy-rickers-naam-cheuam-naam-taan-piip-palm-sugar-simple-syrup.html")
     expect(response_body[:hits][0][:recipe]).to have_key(:url)
