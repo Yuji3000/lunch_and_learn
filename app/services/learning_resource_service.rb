@@ -10,6 +10,7 @@ class LearningResourceService
       f.params["q"] = "#{country}"
       f.params["part"] = "snippet"
     end
+    require 'pry'; binding.pry
     a = JSON.parse(response.body, symbolize_names: true)
   end
 
