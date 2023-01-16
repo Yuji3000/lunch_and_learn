@@ -26,4 +26,19 @@ require 'rails_helper'
         expect(response_body[:data][0][:attributes]).to have_key(:image)
       end
     end
+
+    it 'sad path does not return recipes' do
+      VCR.use_cassette('find_recipe_bad_input') do
+        country = "3232323asdfvasdfasdfasdfasdfasdfasdfasddfasdfasdf"
+
+        get "/api/v1/recipes?country=#{country}"
+
+        response_body = JSON.parse(response.body, symbolize_names: true)
+        # require 'pry'; binding.pry
+
+        expect(response_body).to have_key(:data)
+        expect(response_body[:data].present?).to eq(false)
+
+      end
+    end
   end
