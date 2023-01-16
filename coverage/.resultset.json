@@ -1,26 +1,82 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/pic_service.rb": {
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/facades/country_facade.rb": {
         "lines": [
           1,
           1,
-          0,
-          0,
+          1,
+          1,
+          250,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/facades/learning_resource_facade.rb": {
+        "lines": [
+          1,
+          1,
+          4,
           null,
-          0,
+          4,
+          null,
+          3,
           null,
           null,
           null,
           null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          30,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          3,
+          null,
+          3,
+          null,
+          3,
+          1,
+          null,
+          null,
+          null,
+          3,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/facades/recipe_facade.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          3,
+          40,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/models/favorite.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
           null
         ]
       },
@@ -28,11 +84,257 @@
         "lines": [
           1,
           1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
           null
         ]
       },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/models/application_record.rb": {
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/country.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          251,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/learning_resource.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/recipe.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          41,
+          41,
+          41,
+          41,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/country_service.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/pic_service.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          5,
+          null,
+          null,
+          5,
+          5,
+          5,
+          null,
+          null,
+          5,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/recipe_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          5,
+          5,
+          5,
+          null,
+          null,
+          5,
+          null,
+          null,
+          1,
+          5,
+          5,
+          5,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/youtube_service.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          4,
+          null,
+          null,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          null,
+          null,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/api/v1/favorites_controller.rb": {
+        "lines": [
+          1,
+          1,
+          3,
+          3,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/serializers/favorite_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/api/v1/learning_resources_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/serializers/learning_resource_serializer.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          0,
+          null,
+          2,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/serializers/recipes_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          21,
+          1,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
           1,
           1,
           null
@@ -48,45 +350,42 @@
         "branches": {
         }
       },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/serializers/recipes_serializer.rb": {
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/video.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
       },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/facades/recipe_facade.rb": {
+      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/pictures.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/poros/recipe.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ],
         "branches": {
         }
@@ -94,80 +393,6 @@
       "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/jobs/application_job.rb": {
         "lines": [
           0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/controllers/api/v1/recipes_controller.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/recipe_service.rb": {
-        "lines": [
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/services/learning_resource_service.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0
         ],
         "branches": {
@@ -182,18 +407,8 @@
         ],
         "branches": {
         }
-      },
-      "/Users/source/Desktop/turing/3mod/lunch_and_learn/app/channels/application_cable/channel.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1673735589
+    "timestamp": 1673912353
   }
 }
