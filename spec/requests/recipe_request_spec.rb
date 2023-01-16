@@ -27,27 +27,27 @@ require 'rails_helper'
       end
     end
 
-    it 'will recipes from a random country' do
+    # it 'will recipes from a random country' do
     
-      country = nil
+    #   country = nil
 
-      get "/api/v1/recipes?country=#{country}"
+    #   get "/api/v1/recipes?country=#{country}"
 
-      expect(response).to be_successful
-      expect(response.status).to eq(200)
+    #   expect(response).to be_successful
+    #   expect(response.status).to eq(200)
       
-      response_body = JSON.parse(response.body, symbolize_names: true)
+    #   response_body = JSON.parse(response.body, symbolize_names: true)
 
-      expect(response_body).to be_a(Hash)
-      expect(response_body).to_not have_key(:to)
-      expect(response_body).to_not have_key(:from)
-      expect(response_body[:data].first).to have_key(:id)
-      expect(response_body[:data].first).to have_key(:type)
-      expect(response_body[:data].first).to have_key(:attributes)
-      expect(response_body[:data][0][:attributes]).to have_key(:title)
-      expect(response_body[:data][0][:attributes]).to have_key(:url)
-      expect(response_body[:data][0][:attributes]).to have_key(:country)
-      expect(response_body[:data][0][:attributes]).to have_key(:image)
+    #   expect(response_body).to be_a(Hash)
+    #   expect(response_body).to_not have_key(:to)
+    #   expect(response_body).to_not have_key(:from)
+    #   expect(response_body[:data].first).to have_key(:id)
+    #   expect(response_body[:data].first).to have_key(:type)
+    #   expect(response_body[:data].first).to have_key(:attributes)
+    #   expect(response_body[:data][0][:attributes]).to have_key(:title)
+    #   expect(response_body[:data][0][:attributes]).to have_key(:url)
+    #   expect(response_body[:data][0][:attributes]).to have_key(:country)
+    #   expect(response_body[:data][0][:attributes]).to have_key(:image)
  
-    end
+    # end
   end

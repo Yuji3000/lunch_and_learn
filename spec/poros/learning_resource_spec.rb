@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe LearningResource do
   it "has attributes" do
-    # VCR.use_cassette('learn_resource_thailand') do
+    VCR.use_cassette('learn_resource_thailand') do
       country = "laos"
 
       video_data = {
@@ -20,6 +20,6 @@ RSpec.describe LearningResource do
       expect(resource.images).to eq(pic_data)
       expect(resource.video).to eq(video_data)
       expect(resource.type).to eq("learning_resource")
-    # end
+    end
   end
 end

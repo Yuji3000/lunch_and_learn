@@ -10,5 +10,4 @@ RSpec.describe Country do
     expect(country).to be_a(Country)
     expect(country.name).to eq("laos")
   end
-
 end
