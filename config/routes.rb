@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   post '/api/v1/users', to: 'api/v1/users#create'
+  post '/api/v1/favorites', to: 'api/v1/favorites#create'
   
   namespace :api do
     namespace :v1 do
