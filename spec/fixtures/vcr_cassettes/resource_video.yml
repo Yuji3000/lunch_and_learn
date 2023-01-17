@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=AIzaSyCfuGFmEHFIuJYgk1HlUoHnI0NficwXUz8&maxResults=1&part=snippet&q=laos&type=video
+    uri: https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=<youtube_api_key>&maxResults=1&part=snippet&q=laos&type=video
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Mon, 16 Jan 2023 01:51:06 GMT
+      - Tue, 17 Jan 2023 16:14:03 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -46,11 +46,11 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "YPXEu6Tz6SmERpfTZ8H9dtmnofQ",
+          "etag": "oEDd1z-44XXdqLf7ROsrmeB-1PA",
           "nextPageToken": "CAEQAA",
           "regionCode": "US",
           "pageInfo": {
-            "totalResults": 27,
+            "totalResults": 28,
             "resultsPerPage": 1
           },
           "items": [
@@ -90,5 +90,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Mon, 16 Jan 2023 01:51:06 GMT
+  recorded_at: Tue, 17 Jan 2023 16:14:03 GMT
 recorded_with: VCR 6.1.0

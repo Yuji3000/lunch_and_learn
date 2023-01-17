@@ -75,6 +75,10 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data('<tmdb_key>') { ENV['tmdb_key'] }
+  config.filter_sensitive_data('<youtube_api_key>') { ENV['youtube_api_key'] }
+  config.filter_sensitive_data('<edamam_api_key>') { ENV['edamam_app_key'] }
+  config.filter_sensitive_data('<edamam_id>') { ENV['edamam_id'] }
+  config.filter_sensitive_data('<unsplash_access_key>') { ENV['unsplash_access_key'] }
+  config.filter_sensitive_data('<unsplash_secret_key>') { ENV['unsplash_secret_key'] }
   config.configure_rspec_metadata!
 end
