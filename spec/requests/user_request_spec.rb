@@ -17,5 +17,6 @@ RSpec.describe "user requests" do
     expect(response_body[:data][:attributes]).to have_key(:name)
     expect(response_body[:data][:attributes]).to have_key(:email)
     expect(response_body[:data][:attributes]).to have_key(:api_key)
+    expect(response_body[:data][:id]).to_not eq(nil)
   end
 end

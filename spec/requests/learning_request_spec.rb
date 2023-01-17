@@ -24,6 +24,11 @@ require 'rails_helper'
         expect(response_body[:data][:attributes]).to have_key(:country)
         expect(response_body[:data][:attributes]).to have_key(:video)
         expect(response_body[:data][:attributes]).to have_key(:images)
+        expect(response_body[:data][:attributes]).to_not have_key(:kind)
+        expect(response_body[:data][:attributes]).to_not have_key(:etag)
+        expect(response_body[:data][:attributes]).to_not have_key(:total)
+        expect(response_body[:data][:attributes]).to_not have_key(:total_pages)
+        expect(response_body[:data][:attributes]).to_not have_key(:color)
       end
     end
 
@@ -57,6 +62,8 @@ require 'rails_helper'
         expect(response_body[:data][:attributes]).to have_key(:country)
         expect(response_body[:data][:attributes]).to have_key(:video)
         expect(response_body[:data][:attributes]).to have_key(:images)
+        expect(response_body[:data][:attributes][:images].empty?).to eq(true)
+        expect(response_body[:data][:attributes][:video].empty?).to eq(true)
       end
     end
   end

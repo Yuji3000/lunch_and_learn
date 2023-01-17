@@ -17,6 +17,7 @@ RSpec.describe "add favorites requests" do
     expect(response.status).to eq(201)
     expect(response_body).to have_key(:success)
     expect(response_body[:success]).to eq("Favorite added successfully")
+    expect(response_body).to_not have_key(:error)
   end
 
   it 'will not create a favorite when api key is empty' do
@@ -30,6 +31,7 @@ RSpec.describe "add favorites requests" do
 
     expect(response_body).to have_key(:error)
     expect(response_body[:error]).to eq('User not found, api key is invalid')
+    expect(response_body).to_not have_key(:success)
   end
 
   it 'will not create a favorite when api key is invalid' do
@@ -43,6 +45,7 @@ RSpec.describe "add favorites requests" do
 
     expect(response_body).to have_key(:error)
     expect(response_body[:error]).to eq('User not found, api key is invalid')
+    expect(response_body).to_not have_key(:success)
   end
 
   it 'can get a users favorites' do
@@ -65,6 +68,9 @@ RSpec.describe "add favorites requests" do
     expect(response_body[:data][0][:attributes]).to have_key(:recipe_link)
     expect(response_body[:data][0][:attributes]).to have_key(:country)
     expect(response_body[:data][0][:attributes]).to have_key(:created_at)
+    expect(response_body[:data][0][:attributes]).to_not have_key(:label)
+    expect(response_body[:data][0][:attributes]).to_not have_key(:images)
+    expect(response_body[:data][0][:attributes]).to_not have_key(:source)
   end
 
   it 'sad path no user found' do
@@ -75,5 +81,6 @@ RSpec.describe "add favorites requests" do
     response_body = JSON.parse(response.body, symbolize_names: true)
     expect(response.status).to eq(404)
     expect(response_body[:error]).to eq('User not found, api key is invalid')
+    expect(response_body).to_not have_key(:success)
   end
 end

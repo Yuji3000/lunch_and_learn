@@ -17,6 +17,7 @@ require 'rails_helper'
         expect(response_body).to_not have_key(:from)
         expect(response_body[:data].first).to have_key(:id)
         expect(response_body[:data].first).to have_key(:type)
+        expect(response_body[:data][0][:type]).to_not eq("favorites")
         expect(response_body[:data].first).to have_key(:attributes)
         expect(response_body[:data][0][:attributes]).to have_key(:title)
         expect(response_body[:data][0][:attributes][:title]).to eq("Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)")
@@ -24,6 +25,8 @@ require 'rails_helper'
         expect(response_body[:data][0][:attributes]).to have_key(:country)
         expect(response_body[:data][0][:attributes][:country]).to eq("thailand")
         expect(response_body[:data][0][:attributes]).to have_key(:image)
+        expect(response_body[:data][0][:attributes]).to_not have_key(:uri)
+   
       end
     end
 
