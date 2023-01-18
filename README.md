@@ -32,18 +32,32 @@ Learning Goals
   <li> Ensure you have Ruby 2.7.4 and Rails 5.2.8 installed </li>
   <li> Fork and clone down this repo and navigate to the root folder <code>cd BE-Bik-n-Bru</code></li>
   <li> Run <code>bundle install</code> </li>
-  <li> Run <code>rails db:{drop,create,migrate,seed}</code> </li>
+  <li><code>Run bundle exec figaro install</code></li>
+  <li> Run <code>rails db:{drop,create,migrate}</code> </li>
+
+  <li> In your `application.yml` <br>
+    Assign your Edamama App Id to <code>edamam_id:</code> <br>
+    Assign your Edamam App key to the variable  <code>edamam_app_key:</code><br> 
+    Assign your Youtube Api Key to <code>youtube_api_key:</code><br>
+    Assign your Unsplash_access_key to <code>unsplash_access_key:</code><br>
+    Assign your Unsplash_secret_key to <code>unsplash_secret_key</code><br></li>
+
   <li> (Optional) To run the test suite, run <code>bundle exec rspec spec</code> </li>
-  <li> Run <code>rails s</code> </li>
-</ol>
+  <li> Run <code>rails s</code> to run server</li>
+
 You should now be able to hit the API endpoints using Postman or a similar tool.<br>
+</ol>
+
 Default host is <code>http://localhost:3000</code>
 
+Api keys, app id's and secrets can be created at:
+https://developer.edamam.com/edamam-recipe-api
+https://developers.google.com/youtube/v3/docs/search/list
+https://unsplash.com/developers
 
+## Database-schema
+<img src="app/images/schema.png" alt="schema" height="304">
 
-6. In your `application.yml`, assign your geocoding api key with the variable `api-ninja-key`
-
-User id: 1, name: "Adele", email: "helloitsme@gmail.com", api_key: "123"
 
 ## Tech and Tools
   - ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) **2.7.4**
@@ -51,16 +65,33 @@ User id: 1, name: "Adele", email: "helloitsme@gmail.com", api_key: "123"
   - <img src="app/images/rspec_badge.png" alt="RSpec" height="30"> **3.12.0**
   - ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
  
+   #### Gems Used:
+  - [Pry](https://github.com/pry/pry-rails)
+  - [Faraday](https://lostisland.github.io/faraday/)
+  - [Figaro](https://github.com/laserlemon/figaro)
+  - [Webmock](https://github.com/bblimke/webmock)
+  - [VCR](https://github.com/vcr/vcr)
+  - [RSpec](https://github.com/rspec/rspec-metagem)
+  - [Simple-Cov](https://github.com/simplecov-ruby/simplecov)
+  - [Factory Bot for Rails](https://github.com/thoughtbot/factory_bot_rails)
+  - [Faker](https://github.com/faker-ruby/faker)
+  - [Shoulda Matchers](https://github.com/thoughtbot/shoulda-matchers)
+
+
+
+
+
 
 ## Endpoints
 
+### Request - Get recipes from a given country
 ```    
 GET /api/v1/recipes?country=thailand
 Content-Type: application/json
 Accept: application/json
 ```    
 
-
+### Response Example
 ```
 {
     "data": [
@@ -91,18 +122,20 @@ Accept: application/json
     ]
 }
 ```
+### Response when no recipes returned
  ```    
 {
   "data": []
 }
  ```    
 
+### Request get learning resources from a given country
  ```    
 GET /api/v1/learning_resources?country=laos
 Content-Type: application/json
 Accept: application/json
  ```    
-
+### Response Example
 ```    
     {
         "data": {
@@ -137,7 +170,7 @@ Accept: application/json
     }
  ```    
 
-
+### Response when no learning_resource is returned
  ```    
 {
   "data": {
@@ -152,13 +185,13 @@ Accept: application/json
 } 
 ```    
 
-
+### Request create a new user and api_key is created
  ```    
 POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
  ```    
-
+### Response Example
  ```    
 {
   "name": "Athena Dao",
@@ -177,18 +210,18 @@ Accept: application/json
         "email": "athenadao@bestgirlever.com",
         "api_key": "jgn983hy48thw9begh98h4539h4"
         }
-        }
+      }
     }
  ```    
 
 
-
+### Request Add a new favorite recipe to a user
  ```    
     POST /api/v1/favorites
     Content-Type: application/json
     Accept: application/json
  ```    
-
+### JSON payload example for a request
  ```    
     {
         "api_key": "jgn983hy48thw9begh98h4539h4",
@@ -197,20 +230,20 @@ Accept: application/json
         "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
     }
 ```    
-
+### Response
 ```    
     {
         "success": "Favorite added successfully"
     }
 ```    
 
-
+### Request Get all favorites of a user
  ```    
 GET /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4
 Content-Type: application/json
 Accept: application/json
  ```    
-
+### Response Example
  ```    
     {
         "data": [
