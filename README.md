@@ -30,7 +30,7 @@ Learning Goals
   If you would like to demo this API on your local machine:
 <ol>
   <li> Ensure you have Ruby 2.7.4 and Rails 5.2.8 installed </li>
-  <li> Fork and clone down this repo and navigate to the root folder <code>cd BE-Bik-n-Bru</code></li>
+  <li> Fork and clone down this repo and navigate to the root folder <code>cd lunch_and_learn</code></li>
   <li> Run <code>bundle install</code> </li>
   <li><code>Run bundle exec figaro install</code></li>
   <li> Run <code>rails db:{drop,create,migrate}</code> </li>
@@ -48,11 +48,12 @@ Learning Goals
 You should now be able to hit the API endpoints using Postman or a similar tool.<br>
 </ol>
 
-Default host is <code>http://localhost:3000</code>
+### Other important information:
+- Default host is <code>http://localhost:3000</code>
 
-Api keys, app id's and secrets can be created at:
-https://developer.edamam.com/edamam-recipe-api
-https://developers.google.com/youtube/v3/docs/search/list
+- Api keys, app id's and secrets can be created at:<br>
+https://developer.edamam.com/edamam-recipe-api<br>
+https://developers.google.com/youtube/v3/docs/search/list<br>
 https://unsplash.com/developers
 
 ## Database-schema
@@ -84,14 +85,14 @@ https://unsplash.com/developers
 
 ## Endpoints
 
-### Request - Get recipes from a given country
+### Request - Get recipes from a given country:
 ```    
 GET /api/v1/recipes?country=thailand
 Content-Type: application/json
 Accept: application/json
 ```    
 
-### Response Example
+### Response Example:
 ```
 {
     "data": [
@@ -122,20 +123,20 @@ Accept: application/json
     ]
 }
 ```
-### Response when no recipes returned
+### Response when no recipes returned:
  ```    
 {
   "data": []
 }
  ```    
 
-### Request get learning resources from a given country
+### Request get learning resources from a given country:
  ```    
 GET /api/v1/learning_resources?country=laos
 Content-Type: application/json
 Accept: application/json
  ```    
-### Response Example
+### Response Example:
 ```    
     {
         "data": {
@@ -170,7 +171,7 @@ Accept: application/json
     }
  ```    
 
-### Response when no learning_resource is returned
+### Response when no learning_resource is returned:
  ```    
 {
   "data": {
@@ -185,13 +186,13 @@ Accept: application/json
 } 
 ```    
 
-### Request create a new user and api_key is created
+### Request create a new user and api_key is created:
  ```    
 POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
  ```    
-### Response Example
+### Response Example:
  ```    
 {
   "name": "Athena Dao",
@@ -215,13 +216,13 @@ Accept: application/json
  ```    
 
 
-### Request Add a new favorite recipe to a user
+### Request Add a new favorite recipe to a user:
  ```    
     POST /api/v1/favorites
     Content-Type: application/json
     Accept: application/json
  ```    
-### JSON payload example for a request
+### JSON payload example for a request:
  ```    
     {
         "api_key": "jgn983hy48thw9begh98h4539h4",
@@ -230,20 +231,20 @@ Accept: application/json
         "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
     }
 ```    
-### Response
+### Response example:
 ```    
     {
         "success": "Favorite added successfully"
     }
 ```    
 
-### Request Get all favorites of a user
+### Request Get all favorites of a user:
  ```    
 GET /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4
 Content-Type: application/json
 Accept: application/json
  ```    
-### Response Example
+### Response Example:
  ```    
     {
         "data": [
